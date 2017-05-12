@@ -12,13 +12,11 @@
 
 | Behavior | Example Input | Example Output |
 |:-------------:|:-------------:|:-------------:|
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
-| xxx | xxx | xxx |
+| User selects pizza size radio button | user selects "Small" | "Small" is stored in pizza constructor |
+| User selects as many cheese checkboxes as they want | user selects 4 cheese checkboxes | 4 cheese checkboxes values are stored in pizza constructor |
+| User selects as many meat checkboxes as they want | user selects 2 meat checkboxes | 2 meat checkboxes values are stored in pizza constructor |
+| Upon submitting order, the price will be displayed on the screen | user inputs small pizza with 1 cheese and 2 meats | $5.80 |
+
 
 
 ## Setup/Installation Requirements

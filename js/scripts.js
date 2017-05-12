@@ -7,8 +7,7 @@ function Pizza(size, cheeses, meats) {
   this.price = 0;
 }
 
-
-//Prototype that calculates price of pizza
+//Prototype that calculates price of pizza based on user inputs
 Pizza.prototype.pizzaPrice = function() {
   //Determine price based on user selected size
   if (this.size === "Small"){
@@ -20,13 +19,12 @@ Pizza.prototype.pizzaPrice = function() {
   else if (this.size === "Large"){
     this.price += 8;
   }
-
   //Determine price based on user selected cheese(s)
   if (this.cheeses.length === 5){
     this.price += 2;
   }
   else if (this.cheeses.length === 4){
-    this.price += 1.5;
+    this.price += 1.50;
   }
   else if (this.cheeses.length === 3){
     this.price += 1;
@@ -37,13 +35,12 @@ Pizza.prototype.pizzaPrice = function() {
   else if (this.cheeses.length === 1){
     this.price += .30;
   }
-
   //Determine price based on user selected meat(s)
   if (this.meats.length === 8) {
     this.price += 8;
   }
   else if (this.meats.length === 7) {
-    this.price += 6.5;
+    this.price += 6.50;
   }
   else if (this.meats.length === 6) {
     this.price += 5;
@@ -58,7 +55,7 @@ Pizza.prototype.pizzaPrice = function() {
     this.price += 2.25;
   }
   else if (this.meats.length === 2) {
-    this.price += 1.5;
+    this.price += 1.50;
   }
   else if (this.meats.length === 1) {
     this.price += .75;
@@ -70,24 +67,26 @@ Pizza.prototype.pizzaPrice = function() {
 $(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
+    //Variables to store user inputs
     var userSize = $("input:radio[name=pizzaSize]:checked").val();
     var userCheeses = [];
     var userMeats = [];
-
+    //Populate userCheeses array with user cheese inputs
     $("input:checkbox[name=cheese]:checked").each(function(){
       var cheese = $(this).val();
       userCheeses.push(cheese);
     });
+    //Populate userMeats array with user meats inputs
     $("input:checkbox[name=meats]:checked").each(function(){
       var meat = $(this).val();
       userMeats.push(meat);
     });
-
+    //Create constructor with user inputs
     var newPizza = new Pizza(userSize, userCheeses, userMeats);
     console.log(newPizza);
-
+    //call pizzaPrice() method to calculate price of user created pizza
     newPizza.pizzaPrice();
 
-    $("ul").append("<li>" + newPizza.price + "</li>");
+    $("ul").append("<li>$" + newPizza.price.toFixed(2) + "</li>");
   });
 });
