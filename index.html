@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" id="header-styles">
+        <h1>Order Pizza</h1>
+      </div>
+      <form id="formOne">
+        <div>
+          <h2>Choose your size</h2>
+          <div class="form-group" id="pizzaSize-styles">
+            <label>
+              <input type="radio" name="pizzaSize" id="pizzaSizeSmall" value="Small" checked>
+              Small
+            </label>
+            <label>
+              <input type="radio" name="pizzaSize" id="pizzaSizeMedium" value="Medium" checked>
+              Medium
+            </label>
+            <label>
+              <input type="radio" name="pizzaSize" id="pizzaSizeLarge" value="Large" checked>
+              Large
+            </label>
+          </div>
+        </div>
+        <div>
+          <h2>Choose your cheese(s)</h2>
+          <div class="form-group" id="cheese-styles">
+            <label>
+              <input type="checkbox" name="cheese" value="Cheddar">
+              Cheddar
+            </label><br>
+            <label>
+              <input type="checkbox" name="cheese" value="Feta">
+              Feta
+            </label><br>
+            <label>
+              <input type="checkbox" name="cheese" value="Gouda">
+              Gouda
+            </label><br>
+            <label>
+              <input type="checkbox" name="cheese" value="Mozzarella">
+              Mozzarella
+            </label><br>
+            <label>
+              <input type="checkbox" name="cheese" value="Parmesan">
+              Parmesan
+            </label><br>
+          </div>
+        </div>
+        <div>
+          <h2>Choose your meat(s)</h2>
+          <div class="form-group" id="meats-styles">
+            <label>
+              <input type="checkbox" name="meats" value="Bacon">
+              Bacon
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Canadian">
+              Candadian Bacon
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Chicken">
+              Chicken
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Italian Sausage">
+              Italian Sausage
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Pepperoni">
+              Pepperoni
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Salami">
+              Salami
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Shredded Beef">
+              Shredded Beef
+            </label><br>
+            <label>
+              <input type="checkbox" name="meats" value="Shredded Pork">
+              Shredded Pork
+            </label><br>
+          </div>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <div id="results">
+      </div>
+    </div>
+  </body>
+</html>
