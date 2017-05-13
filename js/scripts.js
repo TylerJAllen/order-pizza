@@ -126,6 +126,7 @@ Order.prototype.orderPrice = function() {
   }
 }
 
+
 //-------------User Interface Logic-------------//
 $(function(){
   //User Interface Global Variables
@@ -139,7 +140,8 @@ $(function(){
 
   $(".formOne").click(function(event){
     event.preventDefault();
-    $(".formOne").hide();
+    $("#startButton").hide();
+    $("#containerBody").show();
     $(".formSize").show();
   });
 
@@ -239,6 +241,13 @@ $(function(){
     // $("ul").append("<li>" + newOrder.sides + "</li>");
     // $("ul").append("<li>" + newOrder.drinks + "</li>");
     $(".formDrinks").hide();
+    $("#buttons").hide();
     $(".results").show();
+    $("#formStartOver").show();
+  });
+
+  $("#formStartOver").click(function(event){
+    event.preventDefault();
+    location.reload();
   });
 });

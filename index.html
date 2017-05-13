@@ -21,15 +21,15 @@
               <h2>Sizes</h2>
               <div class="form-group">
                 <label>
-                  <input type="radio" name="size" value="Small" checked>
+                  <input type="radio" name="size" value="Small">
                   Small
                 </label><br>
                 <label>
-                  <input type="radio" name="size" value="Medium" checked>
+                  <input type="radio" name="size" value="Medium">
                   Medium
                 </label><br>
                 <label>
-                  <input type="radio" name="size" value="Large" checked>
+                  <input type="radio" name="size" value="Large">
                   Large
                 </label><br>
               </div>
@@ -38,23 +38,23 @@
               <h2>Sauces</h2>
               <div class="form-group">
                 <label>
-                  <input type="radio" name="sauce" value="Alfredo" checked>
+                  <input type="radio" name="sauce" value="Alfredo">
                   Alfredo
                 </label><br>
                 <label>
-                  <input type="radio" name="sauce" value="Buffalo" checked>
+                  <input type="radio" name="sauce" value="Buffalo">
                   Buffalo
                 </label><br>
                 <label>
-                  <input type="radio" name="sauce" value="Marinara" checked>
+                  <input type="radio" name="sauce" value="Marinara">
                   Marinara
                 </label><br>
                 <label>
-                  <input type="radio" name="sauce" value="Pesto" checked>
+                  <input type="radio" name="sauce" value="Pesto">
                   Pesto
                 </label><br>
                 <label>
-                  <input type="radio" name="sauce" value="Teriyaki" checked>
+                  <input type="radio" name="sauce" value="Teriyaki">
                   Teriyaki
                 </label><br>
               </div>
@@ -192,14 +192,40 @@
                 </label><br>
               </div>
             </form>
-            <div class="results">
+            <div class="results" id="totalPrice-styles">
               <h2>Total</h2>
-              <h2 id="totalPrice"></h2>
+              <h1 id="totalPrice"></h1>
             </div>
+            <form id="formStartOver">
+              <button type="submit" class="btn" name="button">Start Over</button>
+            </form>
           </div> <!--close leftColumn-->
           <div class="col-xs-6 col-xs-offset-2" id="rightColumn">
+            <div id="buttons">
+              <form class="formSize">
+                <button type="submit" class="btn" name="button">Sauces</button>
+              </form>
+              <form class="formSauce">
+                <button type="submit" class="btn" name="button">Cheeses</button>
+              </form>
+              <form class="formCheese">
+                <button type="submit" class="btn" name="button">Meats</button>
+              </form>
+              <form class="formMeat">
+                <button type="submit" class="btn" name="button">Veggies</button>
+              </form>
+              <form class="formVeggies">
+                <button type="submit" class="btn" name="button">Sides</button>
+              </form>
+              <form class="formSides">
+                <button type="submit" class="btn" name="button">Drinks</button>
+              </form>
+              <form class="formDrinks">
+                <button type="submit" class="btn" name="button">View Order</button>
+              </form>
+            </div>
             <div class="results" id="results-styles">
-              <h3>Order Details</h3>
+              <h2>Order Details</h2>
               <h4>Size</h4>
               <ul id="resultsSize">
               </ul>
@@ -225,34 +251,11 @@
           </div> <!--close rightColumn-->
         </div> <!--close containerRow-->
       </div> <!--close containerBody-->
-      <div class="row" id="buttonRow">
-        <div class="col-xs-4 col-xs-offset-3" id="buttonColumn">
-          <form class="formOne">
-            <button type="submit" class="btn" name="button">Start</button>
-          </form>
-          <form class="formSize">
-            <button type="submit" class="btn" name="button">Sauces</button>
-          </form>
-          <form class="formSauce">
-            <button type="submit" class="btn" name="button">Cheeses</button>
-          </form>
-          <form class="formCheese">
-            <button type="submit" class="btn" name="button">Meats</button>
-          </form>
-          <form class="formMeat">
-            <button type="submit" class="btn" name="button">Veggies</button>
-          </form>
-          <form class="formVeggies">
-            <button type="submit" class="btn" name="button">Sides</button>
-          </form>
-          <form class="formSides">
-            <button type="submit" class="btn" name="button">Drinks</button>
-          </form>
-          <form class="formDrinks">
-            <button type="submit" class="btn" name="button">View Order</button>
-          </form>
-        </div> <!--close button Column-->
-      </div> <!--close buttonRow-->
+      <div class="row" id="startButton">
+        <form class="formOne">
+          <button type="submit" class="btn" name="button">Start</button>
+        </form>
+      </div>
     </div> <!--close containerPage-->
   </body>
 </html>

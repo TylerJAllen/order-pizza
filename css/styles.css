@@ -6,10 +6,12 @@ body {
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #000000;
   color: #f82418;
   font-family: "Odishi2";
   font-size: 25px;
   text-shadow: -3px 0px 3px black, 0px 3px 3px black, 3px 0px 3px black, 0px -3px 3px black;
+  cursor: url("../images/Samurai-8bit.png"), auto;
 }
 /**/
 /*--------------------------Fonts--------------------------*/
@@ -59,6 +61,7 @@ h2 {
 
 #containerBody {
   height: 400px;
+  display: none;
 }
 
 #containerRow {
@@ -73,7 +76,6 @@ h2 {
 #rightColumn {
   height: 370px;
   border-radius: 20px;
-  overflow: scroll;
 }
 
 .priceTotalCol-styles {
@@ -82,6 +84,10 @@ h2 {
 
 .orderTotalCol-styles {
 
+}
+
+#totalPrice-styles {
+  text-align: center;
 }
 
 #totalPrice {
@@ -99,29 +105,89 @@ h2 {
 }
 
 #results-styles {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding-left: 20px;
+  padding-left: 70px;
+}
+
+label:hover {
+  color: white;
+}
+
+input[type='radio'], input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid black;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 5px 0px black inset;
+}
+input[type='radio']:hover, input[type='checkbox']:hover {
+    box-shadow:0 0 5px 0px #f82418 inset;
+}
+input[type='radio']:before, input[type='checkbox']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;
+    border-radius:50%;
+}
+input[type='radio']:checked:before, input[type='checkbox']:checked:before {
+    background: #f82418;
+}
+input[type='radio']:focus, input[type='checkbox']:focus  {
+  outline: 0;
 }
 /**/
 /*--------------------------Form Classes & IDs--------------------------*/
 /**/
-.formSize, .formSauce, .formCheese, .formMeat, .formVeggies, .formSides, .formDrinks, #formViewOrder {
+.formSize, .formSauce, .formCheese, .formMeat, .formVeggies, .formSides, .formDrinks, #formViewOrder, #formStartOver {
 display: none;
 }
 /**/
 /*--------------------------Buttons--------------------------*/
 /**/
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn {
   text-shadow: -2px 0px 2px black, 0px 2px 2px black, 2px 0px 2px black, 0px -2px 2px black;
   width: 300px;
-  font-size: 40px;
+  font-size: 60px;
   background: transparent;
 }
 
-#buttonRow {
+#buttons {
+  text-align: left;
+  padding: 115px 0;
 }
 
-#buttonColumn {
- text-align: center;
+#startButton {
+  text-align: center;
+  padding: 125px 0;
+}
+/**/
+/*--------------------------Cursor--------------------------*/
+/**/
+.custom {
+
 }
