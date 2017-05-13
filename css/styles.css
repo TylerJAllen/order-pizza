@@ -16,60 +16,80 @@ h1 {
 /**/
 /*--------------------------Body Styles--------------------------*/
 /**/
-.keyWord-styles {
+#containerBody {
 
 }
 
-.bodyRow-styles {
+#containerRow {
 
 }
 
-.selectionCol-styles {
+#leftColumn {
 
 }
 
-.imageCol-styles {
+#rightColumn {
 
+}
+
+.priceTotalCol-styles {
+
+}
+
+.orderTotalCol-styles {
+
+}
+
+#totalPrice {
+
+}
+
+.results {
+  display: none;
 }
 
 /**/
 /*--------------------------Form Classes--------------------------*/
 /**/
 .formSize {
-
+display: none;
 }
 
 .formSauce {
-
+display: none;
 }
 
 .formCheese {
-
+display: none;
 }
 
 .formMeat {
-
+display: none;
 }
 
 .formVeggies {
-
+display: none;
 }
 
 .formSides {
-
+display: none;
 }
 
 .formDrinks {
+display: none;
+}
 
+#formViewOrder {
+display: none;
 }
 
 /**/
 /*--------------------------Buttons--------------------------*/
 /**/
-.buttonRow-styles {
+#buttonRow {
 
 }
 
-.buttonCol-styles {
+#buttonColumn {
 
 }

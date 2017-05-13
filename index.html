@@ -6,99 +6,161 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Order Pizza</title>
+    <title>Samurai Pie</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="containerPage">
       <div class="row" id="header-styles">
-        <h1>Order Pizza</h1>
+        <h1>Samurai Pie</h1>
       </div>
-      <form id="formOne">
-        <div>
-          <h2>Choose your size</h2>
-          <div class="form-group" id="pizzaSize-styles">
-            <label>
-              <input type="radio" name="pizzaSize" id="pizzaSizeSmall" value="Small" checked>
-              Small
-            </label>
-            <label>
-              <input type="radio" name="pizzaSize" id="pizzaSizeMedium" value="Medium" checked>
-              Medium
-            </label>
-            <label>
-              <input type="radio" name="pizzaSize" id="pizzaSizeLarge" value="Large" checked>
-              Large
-            </label>
-          </div>
-        </div>
-        <div>
-          <h2>Choose your cheese(s)</h2>
-          <div class="form-group" id="cheese-styles">
-            <label>
-              <input type="checkbox" name="cheese" value="Cheddar">
-              Cheddar
-            </label><br>
-            <label>
-              <input type="checkbox" name="cheese" value="Feta">
-              Feta
-            </label><br>
-            <label>
-              <input type="checkbox" name="cheese" value="Gouda">
-              Gouda
-            </label><br>
-            <label>
-              <input type="checkbox" name="cheese" value="Mozzarella">
-              Mozzarella
-            </label><br>
-            <label>
-              <input type="checkbox" name="cheese" value="Parmesan">
-              Parmesan
-            </label><br>
-          </div>
-        </div>
-        <div>
-          <h2>Choose your meat(s)</h2>
-          <div class="form-group" id="meats-styles">
-            <label>
-              <input type="checkbox" name="meats" value="Bacon">
-              Bacon
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Canadian">
-              Candadian Bacon
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Chicken">
-              Chicken
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Italian Sausage">
-              Italian Sausage
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Pepperoni">
-              Pepperoni
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Salami">
-              Salami
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Shredded Beef">
-              Shredded Beef
-            </label><br>
-            <label>
-              <input type="checkbox" name="meats" value="Shredded Pork">
-              Shredded Pork
-            </label><br>
-          </div>
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-      <div id="results">
-        <ul>
-        </ul>
-      </div>
-    </div>
+      <div class="container" id="containerBody">
+        <div class="row" id="containerRow">
+          <div class="col-xs-3 col-xs-offset-1" id="leftColumn">
+            <form class="formSize">
+              <h2>Sizes</h2>
+              <div class="form-group">
+                <label>
+                  <input type="radio" name="pizzaSize" id="sizeSmall" value="Small" checked>
+                  Small
+                </label>
+                <label>
+                  <input type="radio" name="pizzaSize" id="sizeMedium" value="Medium" checked>
+                  Medium
+                </label>
+                <label>
+                  <input type="radio" name="pizzaSize" id="sizeLarge" value="Large" checked>
+                  Large
+                </label>
+              </div>
+            </form>
+            <!-- <form class="formSauce">
+              <h2>Sauces</h2>
+              <div class="form-group">
+
+              </div>
+            </form> -->
+            <form class="formCheese">
+              <h2>Cheese</h2>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" name="cheese" value="Cheddar">
+                  Cheddar
+                </label><br>
+                <label>
+                  <input type="checkbox" name="cheese" value="Feta">
+                  Feta
+                </label><br>
+                <label>
+                  <input type="checkbox" name="cheese" value="Gouda">
+                  Gouda
+                </label><br>
+                <label>
+                  <input type="checkbox" name="cheese" value="Mozzarella">
+                  Mozzarella
+                </label><br>
+                <label>
+                  <input type="checkbox" name="cheese" value="Parmesan">
+                  Parmesan
+                </label><br>
+              </div>
+            </form>
+            <form class="formMeat">
+              <h2>Meats</h2>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" name="meats" value="Bacon">
+                  Bacon
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Canadian">
+                  Candadian Bacon
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Chicken">
+                  Chicken
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Italian Sausage">
+                  Italian Sausage
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Pepperoni">
+                  Pepperoni
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Salami">
+                  Salami
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Shredded Beef">
+                  Shredded Beef
+                </label><br>
+                <label>
+                  <input type="checkbox" name="meats" value="Shredded Pork">
+                  Shredded Pork
+                </label><br>
+              </div>
+            </form>
+            <!-- <form class="formVeggies">
+              <h2>Veggies</h2>
+              <div class="form-group">
+
+              </div>
+            </form>
+            <form class="formSides">
+              <h2>Sides</h2>
+              <div class="form-group">
+
+              </div>
+            </form>
+            <form class="formDrinks">
+              <h2>Drinks</h2>
+              <div class="form-group">
+
+              </div>
+            </form> -->
+            <div class="results">
+              <h2>Total:</h2>
+              <h3 id="totalPrice"></h3>
+            </div>
+          </div> <!--close leftColumn-->
+          <div class="col-xs-3 col-xs-offset-1" id="rightColumn">
+            <div class="results">
+              <ul id="totalOrder">
+
+              </ul>
+            </div>
+          </div> <!--close rightColumn-->
+        </div> <!--close containerRow-->
+      </div> <!--close containerBody-->
+      <div class="row" id="buttonRow">
+        <div class="col-xs-4 col-xs-offset-4" id="buttonColumn">
+          <form class="formOne">
+            <button type="submit" name="button">Size</button>
+          </form>
+          <form class="formSize">
+            <button type="submit" name="button">Cheese</button>
+          </form>
+          <!-- <form class="formSauce">
+            <button type="submit" name="button" onClick="">Cheese</button>
+          </form> -->
+          <form class="formCheese">
+            <button type="submit" name="button">Meats</button>
+          </form>
+          <form class="formMeat">
+            <button type="submit" name="button">View Order</button>
+          </form>
+          <!-- <form class="formVeggies">
+            <button type="submit" name="button" onClick="">Sides</button>
+          </form>
+          <form class="formSides">
+            <button type="submit" name="button" onClick="">Drinks</button>
+          </form>
+          <form class="formDrinks">
+            <button type="submit" name="button" onClick="">View Order</button>
+          </form> -->
+        </div> <!--close button Column-->
+      </div> <!--close buttonRow-->
+    </div> <!--close containerPage-->
   </body>
 </html>

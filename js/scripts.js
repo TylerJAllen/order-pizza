@@ -1,4 +1,5 @@
 //-------------Business Logic-------------//
+
 //Constructor
 function Pizza(size, cheeses, meats) {
   this.size = size;
@@ -65,28 +66,84 @@ Pizza.prototype.pizzaPrice = function() {
 
 //-------------User Interface Logic-------------//
 $(function(){
-  $("#formOne").submit(function(event){
+  //User Interface Global Variables
+  var userSize = "";
+  // var userSauce = "";
+  var userCheeses = [];
+  var userMeats = [];
+  // var userVeggies = "";
+  // var userSides = "";
+  // var userDrinks = "";
+
+  $(".formOne").click(function(event){
     event.preventDefault();
-    //Variables to store user inputs
-    var userSize = $("input:radio[name=pizzaSize]:checked").val();
-    var userCheeses = [];
-    var userMeats = [];
+    $(".formOne").hide();
+    $(".formSize").show();
+  });
+
+  $(".formSize").submit(function(event){
+    event.preventDefault();
+    userSize = $("input:radio[name=pizzaSize]:checked").val();
+    $(".formSize").hide();
+    $(".formCheese").show();
+  });
+
+  // $(".formSauce").submit(function(event){
+  //   event.preventDefault();
+  //
+  // });
+
+  $(".formCheese").submit(function(event){
+    event.preventDefault();
     //Populate userCheeses array with user cheese inputs
     $("input:checkbox[name=cheese]:checked").each(function(){
       var cheese = $(this).val();
       userCheeses.push(cheese);
     });
+    $(".formCheese").hide();
+    $(".formMeat").show();
+  });
+
+  $(".formMeat").submit(function(event){
+    event.preventDefault();
     //Populate userMeats array with user meats inputs
     $("input:checkbox[name=meats]:checked").each(function(){
       var meat = $(this).val();
       userMeats.push(meat);
     });
-    //Create constructor with user inputs
+
     var newPizza = new Pizza(userSize, userCheeses, userMeats);
-    console.log(newPizza);
+
     //call pizzaPrice() method to calculate price of user created pizza
     newPizza.pizzaPrice();
-
-    $("ul").append("<li>$" + newPizza.price.toFixed(2) + "</li>");
+    $("#totalPrice").text("$" + newPizza.price.toFixed(2))
+    $("ul").append("<li>" + newPizza.size + "</li>");
+    $("ul").append("<li>" + newPizza.cheeses + "</li>");
+    $("ul").append("<li>" + newPizza.meats + "</li>");
+    $(".formMeat").hide();
+    $(".results").show();
   });
+
+  // $(".formVeggies").submit(function(event){
+  //   event.preventDefault();
+  //
+  //
+  // });
+  //
+  // $(".formSides").submit(function(event){
+  //   event.preventDefault();
+  //
+  //
+  // });
+  //
+  // $(".formDrinks").submit(function(event){
+  //   event.preventDefault();
+  //
+  //
+  // });
+
+  //Create constructor with user inputs
+
+
+
 });
