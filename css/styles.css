@@ -1,35 +1,79 @@
 /*--------------------------Backgrounds--------------------------*/
 /**/
-
-
+body {
+  background-image: url("../images/samurai.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #f82418;
+  font-family: "Odishi2";
+  font-size: 25px;
+  text-shadow: -3px 0px 3px black, 0px 3px 3px black, 3px 0px 3px black, 0px -3px 3px black;
+}
+/**/
+/*--------------------------Fonts--------------------------*/
+/**/
+@font-face {
+   font-family: 'Odishi2';
+   src: url('../fonts/Odishi2.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'domo';
+   src: url('../fonts/domo.ttf') format('truetype');
+}
 /**/
 /*--------------------------Main Titles--------------------------*/
 /**/
 h1 {
-
+  font-family: "Odishi2";
+  font-size: 100px;
+  /*color: white;*/
+  text-shadow: -10px 0px 10px black, 0px 10px 10px black, 10px 0px 10px black, 0px -10px 10px black;
 }
-
-.title-styles {
+#header-styles {
   text-align: center;
-
 }
 /**/
 /*--------------------------Body Styles--------------------------*/
 /**/
-#containerBody {
+h2 {
+  font-family: "Odishi2";
+  font-size: 50px;
+  /*color: white;*/
+  text-shadow: -10px 0px 10px black, 0px 10px 10px black, 10px 0px 10px black, 0px -10px 10px black;
+}
 
+.container {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+#containerPage {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#containerBody {
+  height: 400px;
 }
 
 #containerRow {
-
+  padding: 10px;
 }
 
 #leftColumn {
-
+  height: 370px;
+  border-radius: 20px;
 }
 
 #rightColumn {
-
+  height: 370px;
+  border-radius: 20px;
+  overflow: scroll;
 }
 
 .priceTotalCol-styles {
@@ -41,55 +85,43 @@ h1 {
 }
 
 #totalPrice {
+  font-family: 'domo';
+}
 
+#totalOrder {
+  font-size: 15px;
+  /*font-family: 'domo';*/
 }
 
 .results {
   display: none;
+  color: #f82418;
 }
 
+#results-styles {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+}
 /**/
-/*--------------------------Form Classes--------------------------*/
+/*--------------------------Form Classes & IDs--------------------------*/
 /**/
-.formSize {
+.formSize, .formSauce, .formCheese, .formMeat, .formVeggies, .formSides, .formDrinks, #formViewOrder {
 display: none;
 }
-
-.formSauce {
-display: none;
-}
-
-.formCheese {
-display: none;
-}
-
-.formMeat {
-display: none;
-}
-
-.formVeggies {
-display: none;
-}
-
-.formSides {
-display: none;
-}
-
-.formDrinks {
-display: none;
-}
-
-#formViewOrder {
-display: none;
-}
-
 /**/
 /*--------------------------Buttons--------------------------*/
 /**/
-#buttonRow {
+.btn {
+  text-shadow: -2px 0px 2px black, 0px 2px 2px black, 2px 0px 2px black, 0px -2px 2px black;
+  width: 300px;
+  font-size: 40px;
+  background: transparent;
+}
 
+#buttonRow {
 }
 
 #buttonColumn {
-
+ text-align: center;
 }
